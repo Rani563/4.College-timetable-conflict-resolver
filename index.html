@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Time Table Conflict Resolver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📅 College Time Table Conflict Resolver</h1>
+
+    <p class="subtitle">
+        Detect and resolve faculty, room and time-slot conflicts
+    </p>
+
+    <!-- Add Class -->
+
+    <div class="form-box">
+
+        <h2>➕ Add Class</h2>
+
+        <div class="form-grid">
+
+            <div>
+                <label>Subject</label>
+                <input type="text" id="subject"
+                       placeholder="Example: Data Structures">
+            </div>
+
+            <div>
+                <label>Faculty</label>
+                <input type="text" id="faculty"
+                       placeholder="Example: Dr. Kumar">
+            </div>
+
+            <div>
+                <label>Room</label>
+                <input type="text" id="room"
+                       placeholder="Example: CSE-101">
+            </div>
+
+            <div>
+                <label>Day</label>
+                <select id="day">
+                    <option>Monday</option>
+                    <option>Tuesday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Time</label>
+                <select id="time">
+                    <option>09:00 - 10:00</option>
+                    <option>10:00 - 11:00</option>
+                    <option>11:00 - 12:00</option>
+                    <option>12:00 - 01:00</option>
+                    <option>02:00 - 03:00</option>
+                    <option>03:00 - 04:00</option>
+                </select>
+            </div>
+
+        </div>
+
+        <button onclick="addClass()">
+            Add Class
+        </button>
+
+        <button class="resolve-btn" onclick="resolveConflicts()">
+            🔧 Resolve Conflicts
+        </button>
+
+        <button class="reset-btn" onclick="resetTable()">
+            Reset
+        </button>
+
+    </div>
+
+
+    <!-- Result -->
+
+    <div id="result"></div>
+
+
+    <!-- Timetable -->
+
+    <div class="table-box">
+
+        <h2>📋 Current Time Table</h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Faculty</th>
+                        <th>Room</th>
+                        <th>Day</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="timetable"></tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- ADSA -->
+
+    <div class="algorithm-box">
+
+        <h2>📚 ADSA Concepts Used</h2>
+
+        <ul>
+            <li>
+                <b>Graph:</b> Classes are represented as vertices.
+            </li>
+
+            <li>
+                <b>Conflict Detection:</b>
+                Classes sharing a faculty, room or time slot are detected.
+            </li>
+
+            <li>
+                <b>Greedy Algorithm:</b>
+                Attempts to move conflicting classes to available slots.
+            </li>
+
+            <li>
+                <b>Array:</b>
+                Stores timetable entries.
+            </li>
+
+            <li>
+                <b>Searching:</b>
+                Searches for available rooms and time slots.
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

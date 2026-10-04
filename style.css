@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+h1 {
+    text-align: center;
+    color: #4338ca;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+
+/* Form */
+
+.form-box,
+.table-box,
+.algorithm-box {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.form-box h2,
+.table-box h2,
+.algorithm-box h2 {
+    margin-bottom: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 7px;
+    background: #4f46e5;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.resolve-btn {
+    background: #16a34a;
+}
+
+.reset-btn {
+    background: #64748b;
+}
+
+
+/* Result */
+
+#result {
+    margin-bottom: 20px;
+}
+
+.result-box {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    border-left: 6px solid #16a34a;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.result-box.conflict {
+    border-left-color: #dc2626;
+}
+
+.result-box.warning {
+    border-left-color: #f59e0b;
+}
+
+
+/* Table */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    text-align: center;
+}
+
+th {
+    background: #1e293b;
+    color: white;
+}
+
+.normal {
+    color: #15803d;
+    font-weight: bold;
+}
+
+.conflict {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.resolved {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+
+/* Algorithm */
+
+.algorithm-box li {
+    margin: 10px 0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        margin-bottom: 8px;
+    }
+}
